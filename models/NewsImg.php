@@ -33,6 +33,8 @@ class NewsImg extends ActiveRecord
 
 				$filename = hash('md5', microtime(true)) . '.' .  array_pop($ext);
 
+				is_dir(Yii::getAlias('@webroot') .'/img/') ?: mkdir(Yii::getAlias('@webroot') .'/img/');
+
 				file_put_contents(Yii::getAlias('@webroot') .'/img/'.$filename, file_get_contents($link));
 
 				$Img = new NewsImg();
