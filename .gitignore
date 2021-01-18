@@ -16,7 +16,7 @@ Thumbs.db
 /vendor
 
 # img download dir
-/web/img
+/web/img/*.*
 
 # composer itself is not needed
 composer.phar
